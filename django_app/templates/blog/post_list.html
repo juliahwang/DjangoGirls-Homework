@@ -1,13 +1,39 @@
 <!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Post List</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My DjangoGirls Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="#">Django Girls Blog</a></h1>
+            <h3>{{ title }}</h3>
+        </div>
+        <div>
+            {% for post in posts %}
+                {{ post }}
+            {% endfor %}}
+        </div>
+        {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="#">{{ post.title }}</a></h2>
+            <p>{{ post.author }}</p>
+            <p>{{ post.text }}</p>
+        </div>
+        {% endfor %}
+        <div>
+            <p>published: 29.05.2017 09:35</p>
+            <h2><a href="">My First Post</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga ipsam magni nobis officiis, porro praesentium quaerat quas quod? Accusamus.</p>
+        </div>
+        <div>
+            <p>published: 28.05.2017, 09:36</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere necessitatibus sint voluptatem! Autem, deleniti dolor, dolore dolorem dolorum eius eos facilis itaque numquam pariatur quae quas quis sunt tempore ut.</p>
+        </div>
+    </body>
 </html>

@@ -28,3 +28,10 @@ def post_detail(request, pk):
         # pk는 테이블을 만들 때 자동으로 생성되는 id(primary key)를 장고에서 'pk='으로 작성해도 인식하게끔 해준다.
     }
     return render(request, 'blog/post_detail.html', context=context)
+
+
+def post_create(request):
+    context = {
+
+    }
+    return render(request, 'blog/post_create.html', context)

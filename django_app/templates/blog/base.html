@@ -13,12 +13,12 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <!--<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">-->
         <link href='http://fonts.googleapis.com/css?family=Nunito&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <h1><title>My DjangoGirls Blog</title></h1>
+        <title>My DjangoGirls Blog</title>
     </head>
     <body>
     <div class="container">
         <div class="page-header">
-            <h1><a href="#">Django Girls Blog</a></h1>
+            <h1><a href="{% url 'post_list' %}">Django Girls Blog</a></h1>
             <h3>{{ title }}</h3>
         </div>
 

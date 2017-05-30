@@ -20,14 +20,12 @@
             <h1><a href="#">Django Girls Blog</a></h1>
             <h3>{{ title }}</h3>
         </div>
-            {% for post in posts %}
-            <div class="posts">
-                <p class="publishdate">published: {{ post.published_date }}</p>
-                <h2><a href="#">{{ post.title }}</a></h2>
-                <p class="author"><small>{{ post.author }}</small></p>
-                <p class="text">{{ post.text|truncatechars:120 }}</p>
+        <div class="posts">
+            <p class="publishdate">published: {{ post.published_date }}</p>
+            <h2><a href="#">{{ post.title }}</a></h2>
+            <p class="author"><small>{{ post.author }}</small></p>
+            <p class="text">{{ post.text }}</p>
             </div>
-            {% endfor %}
         </div>
     </body>
 </html>

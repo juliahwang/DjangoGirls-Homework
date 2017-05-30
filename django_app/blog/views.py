@@ -7,6 +7,7 @@ from .models import Post
 
 # Create your views here.
 
+
 def post_list(request):
     # return HttpResponse('<html><body>Post List</body></html>')
     posts = Post.objects.filter(
@@ -18,3 +19,12 @@ def post_list(request):
     }
     return render(request, 'blog/post_list.html', context=context)
 
+
+def post_detail(request, pk):
+    print('post_detail pk: ', pk)
+    # post라는 키값으로 pk또는 id값이 매개변수로 주어진 pk변수와 같은 Post 객체를 전달
+    context = {
+        'post': Post.objects.get(id=pk)
+        # pk는 테이블을 만들 때 자동으로 생성되는 id(primary key)를 장고에서 'pk='으로 작성해도 인식하게끔 해준다.
+    }
+    return render(request, 'blog/post_detail.html', context=context)

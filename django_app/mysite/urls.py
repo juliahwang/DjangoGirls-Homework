@@ -19,5 +19,8 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.post_list)
+    url(r'^$', views.post_list),
+    url(r'^post/(?P<pk>\d+)/$', views.post_detail),
 ]
+    # /post/로 시작하고 중간에 숫자 1개 이상을 가지고, /로 끝나는 정규표현식.
+    # *을 쓰면 숫자가 없는 것도 포함하므로 1개 이상 포함하는 +를 사용
